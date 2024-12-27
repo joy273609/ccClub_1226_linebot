@@ -1,7 +1,6 @@
 import requests, re
 from linebot.models import TextMessage
 
-
 def get_stock_data(id, amount, duration):
     url = 'https://backtest-kk2m.onrender.com/one_stock'
     params = {
@@ -11,7 +10,6 @@ def get_stock_data(id, amount, duration):
     }
     response = requests.get(url, params=params)
     return response.json()
-
 
 # for 定期定額使用
 def backtest(msg):
